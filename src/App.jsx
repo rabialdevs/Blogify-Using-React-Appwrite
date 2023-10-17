@@ -26,21 +26,26 @@ function App() {
   return (
     <div className=" w-full">
       {!loading ? (
-        <div className=" bg-[#d7e3fc] flex flex-col items-center h-screen">
-          <div className="flex-none w-full h-14">
-            <Header />
-          </div>
+        <>
+          <div className="flex flex-col items-center h-screen">
+            <div className="flex-none w-full h-14">
+              <Header />
+            </div>
 
-          <main className="grow h-3/5">
-            <Outlet />
-          </main>
+            <main className="flex-auto h-20rem">
+              <Outlet />
+            </main>
 
-          <div className="flex-none w-full items-end">
-            <Footer />
+            <div className="flex-none w-full items-end">
+              <Footer/>
+            </div>
           </div>
-        </div>
+          {/* <Footer /> */}
+        </>
       ) : (
-        <div className="w-full bg-red-400"></div>
+          <div className="w-full bg-red-400">
+            
+        </div>
       )}
     </div>
   );
